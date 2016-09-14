@@ -1,0 +1,12 @@
+package drls;
+
+import com.example.Person;
+
+global java.util.Set<String> personSet;
+
+rule "comment by person age"
+	when
+		Person(age == 12)
+	then
+		personSet.add("@{comment}");
+end

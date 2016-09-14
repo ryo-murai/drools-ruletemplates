@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+	<configuration>
+		<property key="drools.dialect.default" value="mvel" />
+	</configuration>
+
+	<kbase name="kbase-ruletemplates" packages="ruletemplates">
+		<ruleTemplate
+			dtable="ruletemplates/persons.xlsx"
+			template="ruletemplates/persons.drt"
+			row="1" col="1" />
+		<ksession name="ruletemplates"/>
+	</kbase>
+</kmodule>

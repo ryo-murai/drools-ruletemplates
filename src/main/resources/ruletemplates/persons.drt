@@ -1,0 +1,23 @@
+template header
+age
+comment
+
+package ruletemplates;
+
+dialect "mvel"
+
+import com.example.Person;
+
+global java.util.Set<String> personSet;
+
+template "Person Age Template"
+
+rule "comment by person age_@{row.rowNumber}"
+	when
+		Person(age == @{age})
+	then
+		personSet.add("@{comment}");
+end
+
+
+end template
